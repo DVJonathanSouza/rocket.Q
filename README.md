@@ -1,6 +1,6 @@
 <h2>📌 Aplicação</h2>
 
-<img src="Rocket.Q" width="100%">
+<img src="Rocket.Q.png" width="100%">
 
 ## 🚀 Tecnologias
 
