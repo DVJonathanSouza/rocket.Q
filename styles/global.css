@@ -44,8 +44,9 @@ html{
 body{
     /* Estamos determinando que nosso body ocupe do 100% da tela, 
     de cima para baixo com o "vh */
+    display: flex;
     height: 100vh;
-    background: var(--background);
+    background-color: var(--background);
 }
 
 body, button, input, textarea{
@@ -61,7 +62,7 @@ body, button, input, textarea{
 
 .content{
     width: 100%;
-    margin: o auto;
+    margin: 0 auto;
 }
 
 /* Para fazer a tag que tiver esta class inclusa "sumir" */
@@ -85,7 +86,7 @@ input, button, .button{
 }
 
 button, .button{
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
 
     /* Espacamento entre as linhas do texto/titulo*/
@@ -97,16 +98,18 @@ button, .button{
 
     /* "align-items" alinha horizontalmente */
     justify-content: center;
-    background: var(--blue);
+    background-color: var(--blue);
     color: var(--white);
-    cursor: pointer;
     
     /* O tempo que leva a animacao de passar o mouse por cima do elemento */
     transition: filter 0.2s;
+    cursor: pointer;
+    
 }
 
 button:hover, .button:hover{
-    /* "brightness" cria uma camada briloza quando passamos o mouse por cima do elemento */
+    /* "brightness" cria uma camada brilhosa quando 
+    passamos o mouse por cima do elemento */
     filter: brightness(1.2);
 }
 
@@ -118,24 +121,16 @@ button > img
 
 button.outlined,
 .button.outlined{
-    background: var(--white);
+    background-color: var(--white);
     color: var(--blue);
     border: 0.2rem solid var(--blue);
 }
 
 .content header{
     width: 80%;
-    margin: 3.5rem  auto;
+    margin: 3.5rem auto;
 }
 
 .content header img{
     width: 16.7rem;
 }
-
-
-
-
-
-
-
-
