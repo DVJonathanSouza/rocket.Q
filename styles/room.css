@@ -1,0 +1,115 @@
+/* Dando um "max-width" para o broco todo do class="content" */
+.content{
+    max-width: 80%;
+}
+
+/* Chamamos com "#room" para estilizar somente
+o 'header' que esta com o id="room" */
+#room header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    /* Alinha horizontalmente com o "space-between"
+    que da um espaco entre os elementos, no caso sao
+    o logo e a class="buttons"*/
+    justify-content: space-between;
+}
+
+#room header .buttons{
+    display: flex;
+}
+
+/* Estiliazando o 1 button que esta na class="buttons" */
+#room header .buttons .button:nth-child(1){
+    margin-right: 0.8rem;
+    padding: 1.3rem 1.6rem;
+}
+
+/* Estiliazando a img do 1 button que esta na class="buttons" */
+#room header .buttons .button:nth-child(1) img{
+    margin-left: 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Estiliazando o 2 button que esta na class="buttons" */
+#room header .buttons .button:nth-child(2){
+    padding: 1.3rem 3.2rem;
+}
+
+/* Estiliazando a img do 2 button que esta na class="buttons" */
+#room header .buttons .button:nth-child(2) img{
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+/* ----Question Form */
+
+#question-form h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    color: var(--black);
+    font-weight: 700;
+    line-height: 4.2rem;
+    margin-bottom: 2.4rem;
+}
+
+#question-form form{
+    border: 0.2rem solid var(--grey-blue);
+    padding: 1.6rem;
+    border-radius: 0 0.8rem .8rem .8rem;
+    margin-bottom: 1.6rem;
+}
+
+#question-form textarea{
+    
+    /* Para o <textarea> nao ter opcao de "puxar" */
+    resize: none;
+    background: none;
+    width: 100%;
+    
+    /* Para o <textarea> tem as borda quando clicamos
+    dentro dele */
+    outline: none;
+}
+
+/* Estilizando o "placeholder" do "textarea" que esta
+na tag "form"  */
+#question-form form textarea::placeholder{
+    color: var(--grey-blue);
+}
+
+#question-form form footer{
+    display: flex;
+
+    /* "align-items" alinhar verticalmente */
+    align-items: center;
+
+    /* "justify-content" alinhar horizontalmente
+    "space-between" joga os elementos cada um 
+    para seu lado */
+    justify-content: space-between;
+}
+
+/* O simbolo ">" passa para o CSS que esta estilizacao
+eh somente para os filhos direto da tag <footer> */
+#question-form form footer > div{
+    display: flex;
+    align-items: center;
+    color: var(--icons-details);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+#question-form form footer > div img{
+    margin-right: 0.9rem;
+}
+
+#question-form form footer button{
+    height: auto;
+    padding: 0.8rem 2.4rem;
+    line-height: 2.4rem;
+}

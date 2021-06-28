@@ -43,7 +43,7 @@ html{
 
 body{
     /* Estamos determinando que nosso body ocupe do 100% da tela, 
-    de cima para baixo com o "vh */
+    de cima para baixo com o "vh" */
     display: flex;
     height: 100vh;
     background-color: var(--background);
@@ -103,8 +103,7 @@ button, .button{
     
     /* O tempo que leva a animacao de passar o mouse por cima do elemento */
     transition: filter 0.2s;
-    cursor: pointer;
-    
+    cursor: pointer;  
 }
 
 button:hover, .button:hover{

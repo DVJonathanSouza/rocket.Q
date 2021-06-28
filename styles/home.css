@@ -32,7 +32,7 @@ header{
     background: url(/assets/home-bg-img.svg) no-repeat top/contain;
 
     /* "background-position-x" muda somente a posicao do
-    fundo do elemnto, assim nao criando barra de scroll.
+    fundo do elemento, assim nao criando barra de scroll.
     Tendo "X" para mudancas horizontais e "Y" verticais */
     background-position-x: -13rem;
     background-position-y: -2rem;
@@ -46,9 +46,9 @@ main{
     margin-top: -12rem;
 }
 
-main .content{
-    /* Indicando que a largura do "main .content" sera no minimo 36.6rem(363px), 
-    quando a tela ultrapassar este numero a area oculpara 100% */
+main .container{
+    /* Indicando que a largura do "main .container" sera 36.6rem(363px), quando a tela
+    for menor a area oculpara 100% */
     width: min(36.3rem, 100%);
 }
 
@@ -71,6 +71,11 @@ input, button, .button{
     margin-bottom: 1.8rem;
 }
 
+button img,
+.button img{
+    margin-right: 1rem;
+}
+
 /* ----Separator line (ou) */
 
 .separator{
@@ -83,7 +88,7 @@ input, button, .button{
     color: var(--grey-blue);
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    padding: 0 1.35rem;
+    padding: 0 1rem;
     line-height: 0;
 }
 
@@ -107,7 +112,7 @@ qual dos "filhos" da 'class/div' queremos estilizar */
     position: fixed;
 }
 
-.ball.top {
+.ball.top{
     top: -36rem;
     width: 59.3rem;
     right: -35rem;
