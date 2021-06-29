@@ -61,6 +61,12 @@ main h2{
     margin-bottom: 2.4rem;
 }
 
+form input::placeholder{
+    color: var(--grey-blue);
+    font-family: 'Open Sans', sans-serif;
+    width: 400;
+}
+
 input{
     border: 0.2rem solid var(--grey-blue);
     padding: 0 1.6rem;
@@ -71,9 +77,10 @@ input, button, .button{
     margin-bottom: 1.8rem;
 }
 
-button img,
-.button img{
+button > img,
+.button > img{
     margin-right: 1rem;
+    width: 2rem;
 }
 
 /* ----Separator line (ou) */

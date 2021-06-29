@@ -5,6 +5,7 @@
     border: none;
     text-decoration: none;
     box-sizing: border-box;
+    outline: none;
 }
 
 html{
@@ -22,12 +23,14 @@ html{
     --grey-dark: #4D5E77;
     --grey-blue: #A1B2CD;
     --grey-light: #E5EAF1;
+    --grey-medium: #EAECF2;
 
     /* "1rem = 16px(100%) (Isso eh o "User Agent" 
     do navegador, que eh o pre-CSS 
     que os navegadores ja tem)" */
 
-    /* Aqui estamos determinndo o "User Agent" de nosso navegador para 10px */
+    /* Aqui estamos determinndo o "User Agent" de nosso 
+    navegador para 10px */
     font-size: 62.5%; /* Igual ah 10px */
 
     /* 
@@ -50,8 +53,8 @@ body{
 }
 
 body, button, input, textarea{
-    /* "clamp" eh um intervalo de tamanho que estamos determinando nas tags acima, 
-    sendo que:
+    /* "clamp" eh um intervalo de tamanho que estamos 
+    determinando nas tags acima, sendo que:
     14px eh o minimo que a font vai ficar
     1.6rem eh a media que a font vai ficar
     2vw eh o maximo que a font vai chegar */
@@ -112,18 +115,26 @@ button:hover, .button:hover{
     filter: brightness(1.2);
 }
 
-button > img
-.button > img{
-    margin-right: 1rem;
-    width: 2rem;
-}
-
 button.outlined,
 .button.outlined{
     background-color: var(--white);
     color: var(--blue);
     border: 0.2rem solid var(--blue);
 }
+
+button.red,
+.button.red{
+    background-color: var(--red);
+    color: var(--white);
+}
+
+button.grey,
+.button.grey{
+    background-color: var(--grey-light);
+    color: var(--grey-dark);
+}
+
+/* ----Estilizacao do Header */
 
 .content header{
     width: 80%;

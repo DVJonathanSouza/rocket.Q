@@ -79,6 +79,8 @@ o 'header' que esta com o id="room" */
 na tag "form"  */
 #question-form form textarea::placeholder{
     color: var(--grey-blue);
+    font-family: 'Open Sans', sans-serif;
+    width: 400;
 }
 
 #question-form form footer{
@@ -112,4 +114,92 @@ eh somente para os filhos direto da tag <footer> */
     height: auto;
     padding: 0.8rem 2.4rem;
     line-height: 2.4rem;
+}
+
+/* ----Estilizacao da Question */
+
+.question-wrapper{
+    background-color: var(--light-blue);
+    margin-bottom: 0.8rem;
+    border-radius: 0 0.8rem .8rem .8rem;
+    padding: 2.4rem;
+}
+
+.question-wrapper .question-content{
+    display: flex;
+
+    /* "flex-start" alinha verticalmente ao topo */
+    align-items: flex-start;
+}
+
+.question-wrapper .question-content .user{
+    background-color: var(--blue);
+    clip-path: circle();
+    padding: 1.4rem;
+}
+
+.question-wrapper .question-content p{
+    margin-left: 1.6rem;
+    color: var(--black);
+
+    /* "break-word" nao permite que quando escrevermos 
+    uma palavra muito grande, ela quebre o layout */
+    word-break: break-word;
+    display: flex;
+
+    /* Definindo que o <p> vai centralizar o seu conteudo
+    dentro de si mesmo */
+    align-items: center;
+
+    /* Definimos um "min-height" para que quando o <p>
+    passe desse tamanho ele nao centralize dentro de si
+    mesmo */
+    min-height: 5.2rem;
+}
+
+.question-wrapper .actions{
+    display: flex;
+    align-items: center;
+
+    /* "justify-content" alinhar horizontalmente
+    "flex-end" joga os elementos para o
+    fim da linha */
+    justify-content: flex-end;
+}
+
+.question-wrapper .actions > a{
+    display: flex;
+    align-items: center;
+    color: var(--grey-dark);
+}
+
+.question-wrapper .actions > a > img{
+    margin-right: 0.8rem;
+}
+
+/* O seletor "+" esta passando que a estilizacao
+sera para o irmao. Neste caso estara indo para
+o segundo <a> que estara na class="actions" */
+.question-wrapper .actions > a + a{
+    margin-left: 2.4rem;
+}
+
+/* ----Estilizacao da Question Read */
+
+/* Nao colocamos o espaco para ter as duas estilizacao,
+mundao so quando for chamado a class="read", enquanto
+isso nao acontece o estilo sera original da
+class="question-wrapper" */
+.question-wrapper.read{
+    background-color: var(--grey-medium);
+}
+
+.question-wrapper.read .question-content .user{
+    background-color: var(--grey-blue);
+}
+
+/* ----? */
+
+#end{
+    padding: 0.1px;
 }
