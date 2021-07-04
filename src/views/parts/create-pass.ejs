@@ -1,0 +1,18 @@
+<!-- <section> eh a tag para uma divisao do conteudo com o mesmo fim, neste caso nosso "login" -->
+<section>
+    <h2>Crie sua própria sala</h2>
+
+    <!-- <form> eh a tag que sera colocado todos os elementos que compoem este formulario
+    O "method="POST" estamos iformando que estaremos enviado
+    determinadas informacoes
+    E dentro da "action" colocamos a URL(rota) que estaremos enviadno estas informacoes -->
+    <form action="/create-room" method="POST">
+
+        <!-- <label> eh a tag que indica do que se trata o <input> conectando-os com o "for/id" -->
+        <label class="sr-only" for="room-pass">Insira uma senha</label>
+        <input type="password" name="password" id="room-pass" placeholder="Insira uma senha">
+        <button><img src="/images/users-white.svg" alt="Entrar na sala">
+            Criar sala
+        </button>
+    </form>
+</section>

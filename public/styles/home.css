@@ -1,0 +1,132 @@
+.content{
+    display: grid;
+
+    /* Indicando que as colunas de nosso "grid" sera duas, sendo uma de 60% 
+    para esquerda e 40% para direita. Lebrando que podemos dividir em mais partes, 
+    contudo a soma das % deve ser 100 */
+    grid-template-columns: 60% 40%;
+
+    /* Indicando que as linhas de nosso "grid" sera duas, sendo uma de 11.4rem(114px) 
+    para cima e 1 fracao pegando o restante todo para baixo */
+    grid-template-rows: 11.4rem 1fr;
+
+    /* Indicando o que cada area de nosso "grid" vai portar
+    A priemeira "low" vai ter daus "columns" com o <header> 
+    A segunda "low" vai ter uma "columns" para esquerda e direita */
+    grid-template-areas: 
+    'header header'
+    'left right'
+}
+
+header{
+    /* Indicando qual parte da divisao do "grid" vai estar */
+    grid-area: header;    
+}
+
+#bg{
+    /* Indicando qual parte da divisao do "grid" vai estar */
+    grid-area: left;
+
+    /* "no-repeat"=nao repetir a img
+    "top/contain"=forcar a img ficar top em seu 100% */
+    background: url(/images/home-bg-img.svg) no-repeat top/contain;
+
+    /* "background-position-x" muda somente a posicao do
+    fundo do elemento, assim nao criando barra de scroll.
+    Tendo "X" para mudancas horizontais e "Y" verticais */
+    background-position-x: -13rem;
+    background-position-y: -2rem;
+}
+
+main{
+    /* Indicando qual parte da divisao do "grid" vai estar */
+    grid-area: right;
+    display: flex;
+    align-items: center;
+    margin-top: -12rem;
+}
+
+main .container{
+    /* Indicando que a largura do "main .container" sera 36.6rem(363px), quando a tela
+    for menor a area oculpara 100% */
+    width: min(36.3rem, 100%);
+}
+
+main h2{
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    
+    /* min 20px med 5vw max 2.8rem */
+    font-size: clamp(20px, 5vw, 2.8rem);
+    margin-bottom: 2.4rem;
+}
+
+form input::placeholder{
+    color: var(--grey-blue);
+    font-family: 'Open Sans', sans-serif;
+    width: 400;
+}
+
+input{
+    border: 0.2rem solid var(--grey-blue);
+    padding: 0 1.6rem;
+}
+
+input, button, .button{
+    width: 100%;
+    margin-bottom: 1.8rem;
+}
+
+button > img,
+.button > img{
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+/* ----Separator line (ou) */
+
+.separator{
+    display: flex;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+.separator div:nth-child(2){
+    color: var(--grey-blue);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 0 1rem;
+    line-height: 0;
+}
+
+/* "div:nth-child(1)" eh usado para escolhermos
+qual dos "filhos" da 'class/div' queremos estilizar */
+.separator div:nth-child(1),
+.separator div:nth-child(3){
+    background-color: var(--grey-blue);
+    width: 100%;
+    height: 1px;
+}
+
+/* ----Create balls */
+
+.ball{
+    width: 21.2rem;
+    height: 21.2rem;
+    background: var(--blue);
+    clip-path: circle();
+    opacity: 0.1;
+    position: fixed;
+}
+
+.ball.top{
+    top: -36rem;
+    width: 59.3rem;
+    right: -35rem;
+    height: 63.3rem;
+}
+
+.ball.bottom{
+    bottom: -15rem;
+    right: 5.6rem;
+}
