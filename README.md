@@ -35,7 +35,7 @@ git clone https://github.com/DVJonathanSouza/rocket.Q.git
 Instale todas as dependências do projeto
 
 ```
-npm i
+npm install
 ```
 
 Gere as tabelas do banco de dados
